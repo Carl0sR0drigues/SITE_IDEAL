@@ -1,0 +1,6 @@
+Apartamento B, Apartamento de 2 quartos, imagem\casa1.png, R$4.500,00
+Casa A, Linda casa com 3 quartos e piscina, imagem\casa2.jpg, R$2.500,00
+Casa B partamento de 2 quartos, Linda casa com 3 quartos e piscina, imagem\casa3.jpg, R$7.500,00
+Sobrado dois andares,com 3 quartos e garagem com carro zerocom 3 quartos e garagem com carro zerocom 3 quartos e garagem com carro zerocom 3 quartos e garagem com carro zerocom 3 quartos e garagem com carro zerocom 3 quartos e garagem com carro zero, imagem\sobrado1.jpg, R$70.000,00
+
+

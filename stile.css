@@ -228,6 +228,74 @@ i {
     padding: 0; /* Remove espaçamento extra */
   }
 }
+.services {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  line-height: 125%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 1080px;
+}
+
+/* Estilos principais para o item de aluguel */
+.rent {
+  display: flex;
+  justify-content: flex-start; /* Alinha a imagem e o texto à esquerda */
+  align-items: center; /* Alinha verticalmente os elementos no centro */
+  margin-bottom: 20px;
+}
+
+/* Estilos para a descrição do item */
+.rental-details {
+  max-width: 500px;
+  margin-left: 20px; /* Espaço entre a imagem e o texto */
+  display: flex;
+  flex-direction: column; /* Garante que os textos fiquem empilhados */
+  justify-content: center; /* Alinha o texto verticalmente */
+}
+
+/* Ajuste para os elementos internos */
+.rental-details h3,
+.rental-details p,
+.rental-price {
+  margin: 0;
+  padding: 5px 0; /* Espaçamento uniforme entre os elementos */
+}
+
+/* Estilos para as imagens */
+.rent img {
+  width: 100%;
+  max-width: 400px; /* Define o tamanho máximo da imagem */
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .rent {
+    flex-direction: column; /* Alinha imagem e descrição verticalmente em telas pequenas */
+    align-items: flex-start; /* Alinha ao início horizontalmente */
+  }
+  .rental-details {
+    margin-left: 0;
+  }
+}
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
