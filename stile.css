@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -16,46 +17,19 @@ header {
 }
 
 i {
-  color: #fff;
-}
-
-.header-icons {
-  display: flex;
-  gap: 14px;
-}
-
-.header-icons a:hover i {
-  animation: translateY 0.8s infinite alternate;
-  color: #d34040;
-}
-
-@keyframes translateY {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-10px) scale(1.5);
-  }
-}
-.header-button {
-  border: 1px solid #fff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  color: #fff;
-  background-color: transparent;
-  transition: background-color 0.8s;
-}
-
-.header-button:hover {
-  border: 2.5px solid #d34040;
-  background-color: #d34040;
+  color: #232224;
 }
 
 .header-logo {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 14px;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 48px;
+  margin-left: auto; /* Empurra para o centro */
+  margin-right: auto; /* Empurra para o centro */
+  width: -moz-fit-content;
+  width: fit-content; /* Garante que ocupe apenas o espaço necessário */
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -70,16 +44,60 @@ i {
     font-size: 40px;
   }
   .header-logo img {
-    width: 160px;
+    width: 150px;
     margin-top: 50px;
   }
   .header-button {
     display: none;
   }
 }
+.header-icons {
+  display: flex; /* Configura o contêiner como flexbox */
+  gap: 50px; /* Espaçamento entre os ícones */
+  height: 40px; /* Altura do contêiner */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 15px; /* Espaçamento superior */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+  width: -moz-fit-content;
+  width: fit-content; /* Limita o contêiner ao tamanho do conteúdo */
+  font-size: 20px; /* Ajuste o valor conforme necessário */
+  transition: transform 0.3s; /* Efeito suave para hover */
+}
+
+.header-icons a:nth-child(1) i {
+  color: #E4405F; /* Rosa do Instagram */
+}
+
+.header-icons a:nth-child(2) i {
+  color: #3b5998; /* Azul do Facebook */
+}
+
+.header-icons a:nth-child(3) i {
+  color: #25D366; /* Verde do WhatsApp */
+}
+
+i {
+  color: #232224;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-10px) scale(1.5);
+  }
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .bg-home {
@@ -101,6 +119,115 @@ i {
   opacity: 1;
 }
 
+.hero {
+  color: #232224;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-weight: 800;
+  font-size: 30px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact {
+  border: 1px solid #232224;
+  padding: 4px 16px;
+  border: 1;
+  border-radius: 8px;
+  color: #232224;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 1px 0;
+  transition: background-color 0.9s;
+}
+
+.button-contact:hover {
+  border: 2px solid #e20e0e;
+  background-color: #d34040;
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 5vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+}
+.about {
+  overflow: hidden;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.about-content img {
+  max-width: 470px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Empilha os elementos */
+    text-align: center;
+  }
+  .about-content img {
+    max-width: 100%; /* A imagem ocupa a largura total */
+    margin-bottom: 10px;
+  }
+  .about-description {
+    padding: 0; /* Remove espaçamento extra */
+  }
+}
 body {
   font-family: "Sora", sans-serif;
   width: 100%;

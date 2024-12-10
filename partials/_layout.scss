@@ -1,7 +1,55 @@
+.header-icons {
+    display: flex; /* Configura o contêiner como flexbox */
+    gap: 50px; /* Espaçamento entre os ícones */
+    height: 40px; /* Altura do contêiner */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 15px; /* Espaçamento superior */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    width: fit-content; /* Limita o contêiner ao tamanho do conteúdo */
+    font-size: 20px; /* Ajuste o valor conforme necessário */
+    // color: #000; /* Altere a cor se desejar */
+    transition: transform 0.3s; /* Efeito suave para hover */
+}
+
+.header-icons a:nth-child(1) i {
+    color: #E4405F; /* Rosa do Instagram */
+}
+
+.header-icons a:nth-child(2) i {
+    color: #3b5998; /* Azul do Facebook */
+}
+
+.header-icons a:nth-child(3) i {
+    color: #25D366; /* Verde do WhatsApp */
+}
+
+
+
+i{
+    color: $black-normal;
+}
+
+.header-icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+    }
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-10px) scale(1.5);
+    }
+}
 
 .container{
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .bg-home{
@@ -21,5 +69,126 @@
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
+    
+}
 
+.hero{
+    color: $black-normal;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-weight: 800;
+        font-size: 30px;
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button-contact{
+    border: 1px solid $black-normal;
+    padding: 4px 16px;
+    border: 1;
+    border-radius: 8px;
+    color: $black-normal;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 1px 0;
+    transition: background-color 0.9s;
+}
+
+.button-contact:hover{
+    border: 2px solid $red-normal;
+    background-color: $red-light;
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 5vh;
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size: 24px;
+    }
+    .hero p{
+        font-size: 12px;
+    }
+}
+
+
+.about{
+    // background-color: $primary-normal;
+    overflow: hidden;
+    // color: $white-normal;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    // padding: 34px 14px 64px 14px;
+    
+    img{
+        max-width: 470px;
+    }
+}
+.about-content div{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Empilha os elementos */
+        text-align: center;
+    }
+    
+    .about-content img {
+        max-width: 100%; /* A imagem ocupa a largura total */
+        margin-bottom: 10px;
+    }
+    
+    .about-description {
+        padding: 0; /* Remove espaçamento extra */
+    }
 }

@@ -9,50 +9,37 @@ header{
 }
 
 i{
-    color: $white-normal;
+    color: $black-normal;
 }
 
-.header-icons{
+
+
+// .header-button{
+//     border: 1px solid $white-normal;
+//     padding: 8px 16px;
+//     border-radius: 4px;
+//     color: $white-normal;
+//     background-color: transparent;
+//     transition: background-color 0.8s;
+// }
+
+// .header-button:hover{
+//     border: 2.5px solid $red-light;
+//     background-color: $red-light;
+// }
+
+.header-logo {
     display: flex;
-    gap: 14px;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 48px;
+    margin-left: auto; /* Empurra para o centro */
+    margin-right: auto; /* Empurra para o centro */
+    width: fit-content; /* Garante que ocupe apenas o espaço necessário */
+    text-align: center;
 }
 
-.header-icons a:hover{
-    i{
-        animation: translateY 0.8s infinite alternate;
-        color: $red-light;
-    }
-}
 
-@keyframes translateY {
-    from{
-    transform: translateY(0) scale(1);
-}
-    to {
-        transform: translateY(-10px) scale(1.5);
-    }
-}
-
-.header-button{
-    border: 1px solid $white-normal;
-    padding: 8px 16px;
-    border-radius: 4px;
-    color: $white-normal;
-    background-color: transparent;
-    transition: background-color 0.8s;
-}
-
-.header-button:hover{
-    border: 2.5px solid $red-light;
-    background-color: $red-light;
-}
-
-.header-logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 14px;
-}
 
 @media screen and (max-width: 768px){
     .header-content{
@@ -67,7 +54,7 @@ i{
         }
     }
     .header-logo img{
-        width: 160px;
+        width: 150px;
         margin-top: 50px;
         
     }
