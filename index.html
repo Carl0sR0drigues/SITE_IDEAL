@@ -36,15 +36,15 @@
 
             <div class="header-icons">
 
-                <a href="#">
+                <a href="https://www.instagram.com/imobiliariaideal.pa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="target="_blank">
                     <i class="fa-brands fa-instagram fa-2x"></i>
                 </a>
                 
-                <a href="#">
+                <a href="https://www.facebook.com/share/1ExjvgLBYM/?mibextid=LQQJ4d"target="_blank">
                     <i class="fa-brands fa-facebook fa-2x"></i>
                 </a>
 
-                <a href="#">
+                <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5594981097000%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaYoMHENB-RriHFz-Kt-P9WdQDDZP7ReuFKzm-LvUUBiVYnUXMKFRrOTxvo_aem_gS33X5FlRWw7QibNCaEwyg&e=AT04pKRtPRg5J53Lns1WpGjjvy8htvNaE9Fq3YNVLWHGJHnYmI9ckD49BYftgNy-aHb9GjXsVx29otbMrgbM4X6vfBqHYAX-nC4ItA"target="_blank">
                     <i class="fa-brands fa-whatsapp fa-2x"></i>
                 </a>
 
@@ -58,9 +58,10 @@
                     De segunda à sexta-feira: 08:00 às 12:00 / 14:00 às 18:00<br>
                     Aos sábados: 08:00 às 12:00
                   </p>
-                  <a href="#" class="button-contact" target="_blank">
-                    Entrar em contato
+                  <a href="https://maps.app.goo.gl/4m1JhaUGYyUiNdB16" class="button-contact" target="_blank">
+                    Venha nos visitar
                   </a>
+                  <p>Rua A n°631A, Cidade Nova, Parauapebas Pa, Parauapebas 68515000 <br> ☎️ (94) 99168-7433 <br> ☎️ (94) 98109-7000 <br> ☎️ (94) 99135-0982</p>
             </main>
 
         </header>
@@ -119,24 +120,36 @@
                             const rentsSection = document.getElementById('rents-section');
                             const rentals = data.split('\n');  // Separar cada linha do arquivo
                             rentals.forEach(rental => {
-                                const [name, description, image, price] = rental.split(',');  // Separar os dados
-                                if (name && description && image && price) {  // Verificar se todos os dados estão presentes
+                                const [name, description, image, price, locationURL] = rental.split(','); // Adicionamos `locationURL` como a 5ª parte
+                                if (name && description && image && price && locationURL) {  // Verificar se todos os dados estão presentes
+                                    const cleanDescription = description.replace(/,/g, ' - '); // Substituir as vírgulas na descrição
+                                    
                                     const rentDiv = document.createElement('div');
                                     rentDiv.classList.add('rent');
                                     rentDiv.innerHTML = `
-                                        <img src="${image.trim()}" alt="${name.trim()}" style="width:100%; max-width:400px;">
+                                            <img src="${image.trim()}" alt="${name.trim()}" style="width:100%; max-width:400px;">
                                         <div class="rental-details">
                                             <h3>${name.trim()}</h3>
-                                            <p>${description.trim()}</p>
+                                            <p>${cleanDescription.trim()}</p>
                                             <div class="rental-price">
                                                 <strong>Locação</strong>
                                                 <button>${price.trim()}</button>
                                             </div>
+                                            <div class="location-button">
+                                                <a href="${locationURL.trim()}" target="_blank">
+                                                    <button>Localização</button>
+                                                </a>
+                                            </div>
+                                            <div class="details-button">
+                                                <button onclick="window.open('pagina_detalhes.html', '_blank');">Mais detalhes</button>
+                                            </div>
                                         </div>
                                     `;
-                                    rentsSection.appendChild(rentDiv);  // Adicionar ao HTML
+                                    rentsSection.appendChild(rentDiv); // Adicionar ao HTML
                                 }
                             });
+
+
                         })
                         .catch(error => console.error('Erro ao carregar os dados:', error));
                 }
@@ -163,8 +176,8 @@
                 margin: 0;
                 padding: 5px 0;
                 text-align: left; /* Alinha apenas a descrição */
-
             }
+            
         </style>
     </body>
     </html>
