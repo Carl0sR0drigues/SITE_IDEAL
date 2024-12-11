@@ -154,8 +154,8 @@ i {
 }
 
 .button-contact:hover {
-  border: 2px solid #ff0000;
-  background-color: #ffcccc;
+  border: 2px solid #000000;
+  background-color: #3dec34;
   animation: scaleButton 0.8s alternate infinite;
 }
 
@@ -277,6 +277,12 @@ i {
   border: 2px solid #000;
   border-radius: 10px;
   margin-top: 30px;
+  transition: transform 0.4s;
+}
+
+.rent img:hover {
+  transform: scale(1.08);
+  z-index: 1;
 }
 
 .rental-details {
@@ -284,6 +290,7 @@ i {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .rental-price {
@@ -363,6 +370,70 @@ i {
     margin-left: 0;
   }
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 10px;
+  color: black;
+}
+
+.footer-icons {
+  display: flex; /* Define flexbox para layout */
+  gap: 15px; /* Espaço entre os ícones */
+  height: 40px; /* Altura do contêiner */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin: 15px auto; /* Espaçamento superior e centralização */
+  width: -moz-fit-content;
+  width: fit-content; /* Adapta o tamanho ao conteúdo */
+  font-size: 25px; /* Tamanho da fonte */
+  transition: transform 0.3s; /* Efeito suave no hover */
+}
+
+.footer-icons a:nth-child(1) i {
+  color: #E4405F;
+} /* Cor do Instagram */
+.footer-icons a:nth-child(2) i {
+  color: #3b5998;
+} /* Cor do Facebook */
+.footer-icons a:nth-child(3) i {
+  color: #25D366;
+} /* Cor do WhatsApp */
+/* Animação no hover dos ícones */
+.footer-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-10px) scale(1.5);
+  }
+}
+.services-footer h3 {
+  color: black;
+  width: 100vw; /* Largura total da janela */
+  margin: 0px 0; /* Espaçamento superior e inferior */
+  padding: 10px 0; /* Espaçamento interno para aumentar a área do fundo */
+  text-align: center; /* Centraliza o texto */
+  position: relative; /* Garante a posição relativa */
+  z-index: 1; /* Certifica-se de que o fundo fique acima de outros elementos */
+  margin-bottom: 1px;
+}
+
+.services-footer {
+  margin: 0px 0; /* Espaçamento superior e inferior */
+  padding: 0px 0; /* Espaçamento interno para aumentar a área do fundo */
+  text-align: center; /* Centraliza o texto */
+  position: relative; /* Garante a posição relativa */
+  z-index: 1; /* Certifica-se de que o fundo fique acima de outros elementos */
+}
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
