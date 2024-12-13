@@ -1,8 +1,8 @@
-Residência, Casa com dois quartos sociais - um quarto suíte - sala - cozinha garagem e um amplo quinta, imagem\casa1.png, R$8.000, https://maps.app.goo.gl/BYmvFdSade2PkVqRA, https://maps.app.goo.gl/BYmvFdSade2PkVqRA
+Residência, Casa com dois quartos sociais - um quarto suíte - sala - cozinha garagem e um amplo quinta, imagem\casa1.png, R$8.000, https://maps.app.goo.gl/BYmvFdSade2PkVqRA, pagina_detalhes.html
 
-Residência, Linda casa com 3 quartos e piscina,imagem\casa2.jpg,R$2.500,https://maps.app.goo.gl/MDHz7SG3KABovNeS9, http://127.0.0.1:5500/pagina_imovel_2/pagina_detalhes.html
+Residência, Linda casa com 3 quartos e piscina,imagem\casa2.jpg,R$2.500,https://maps.app.goo.gl/MDHz7SG3KABovNeS9, pagina_detalhes.html
 
-Residência, Linda casa com 2 quartos e piscina,imagem\casa3.jpg,R$7.500,https://maps.app.goo.gl/m5zGN2gQ5MQYh6eL6, http://127.0.0.1:5500/pagina_imovel_3/pagina_detalhes.html
+Residência, Linda casa com 2 quartos e piscina,imagem\casa3.jpg,R$7.500,https://maps.app.goo.gl/m5zGN2gQ5MQYh6eL6, pagina_detalhes.html
 
 
 
