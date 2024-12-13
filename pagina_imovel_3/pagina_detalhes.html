@@ -111,10 +111,17 @@
         
         
         
-        footer.footer .footer-logo img {
-            max-width: 150px;
-    margin-bottom: 10px;
+.logo img {
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+    max-width: 1440px; /* Largura máxima */
+    margin: 0 auto;    /* Centraliza horizontalmente */
+    padding: 0 10px;   /* Espaçamento interno */
 }
+
+.logo img:hover {
+    transform: scale(1.25); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
+
 
 
 .footer-icons {
@@ -157,7 +164,6 @@
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: black; /* Fundo preto */
     align-items: center;
     justify-content: center;
     padding: 20px 0;
@@ -173,23 +179,20 @@
 
 .copyright {
     width: 100%;
-    background-color: #ffffff;  /* Faixa branca */
-    font-size: 15px;
+    font-size: 12px;
     position: absolute;
     bottom: 0;
     padding: 1px 0;
     text-align: center;
-    height: 30px;
+    height: 25px;
 
     
 }
 
 .copyright p {
-    color: black; /* Cor do texto preta */
+    color: rgb(0, 0, 0); /* Cor do texto preta */
     opacity: 1;   /* Garantir que o texto não tenha opacidade */
-    margin: 0; /* Remover margem para centralizar */
-    padding-bottom: 8px; /* Ajustar o corpo para evitar sobreposição */
-
+    font-family: "Arial black", sans-serif;
 }
 
 /* Ajustes de serviços, se necessário */
@@ -304,11 +307,14 @@
             </a>
         </div>
 
-        <div>
-            <img 
-            src="logo_ideal-removebg-preview.png" 
-            alt="logo da imobiliaria">
+        <div class="logo">
+            <a href="https://maps.app.goo.gl/TiXhAbm6JEMWuiyC7" target="logo">
+                <img 
+                src="logo_ideal-removebg-preview.png" 
+                alt="logo da imobiliaria" >
+            </a>
         </div>
+        
 
         <div class="copyright">
             <p>Copyright 2024 | Dev Carl0sR0drigues - Todos direitos reservados.</p>
