@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Estilizando o título "Detalhes do Imóvel" */
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;  /* Alterei a cor do texto para branco para melhor contraste */
+            font-family: 'Arial', sans-serif;
+            margin-top: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: #007bff;  /* Cor de fundo azul */
+            padding: 10px;  /* Adiciona um padding ao redor do título */
+            border-radius: 40px;  /* Bordas arredondadas */
+        }
+
+
+        .property-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .property-images img {
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Efeito de zoom nas imagens */
+        .property-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .property-details {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilizando o preço como um botão */
+        .property-price {
+            font-size: 18px;
+            color: #fff;
+            background-color: #28a745;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            text-decoration: none;
+        }
+
+        .property-price:hover {
+            background-color: #218838;
+        }
+
+        /* Botão de localização */
+        .property-location {
+            margin-top: 20px;
+        }
+
+        .property-location a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .property-location a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Imóvel</h1>
+        <div class="property-images" id="property-images">
+            <!-- As imagens do imóvel serão carregadas aqui -->
+        </div>
+
+        <div class="property-details">
+            <p id="property-description"><strong>Descrição:</strong></p>
+            <a href="#" class="property-price" id="property-price"></a>
+            <div class="property-location">
+                <a id="property-location" href="#" target="_blank">Localização</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar os detalhes do imóvel
+        function loadPropertyDetails() {
+            fetch('imovel_detalhes.txt') // Substituir pelo nome do arquivo
+                .then(response => response.text())
+                .then(data => {
+                    const [images, description, price, locationURL] = data.split(',');
+
+                    // Inserir as imagens dinamicamente
+                    const imagesArray = images.split(';'); // Dividir as imagens por ponto e vírgula
+                    const imagesDiv = document.getElementById('property-images');
+                    imagesArray.forEach(image => {
+                        if (image.trim()) {
+                            const img = document.createElement('img');
+                            img.src = image.trim();
+                            img.alt = "Imagem do Imóvel";
+                            imagesDiv.appendChild(img);
+                        }
+                    });
+
+                    // Inserir a descrição
+                    document.getElementById('property-description').innerText += ' ' + description.trim();
+
+                    // Inserir o preço como botão
+                    const priceElement = document.getElementById('property-price');
+                    priceElement.innerText = 'Preço: ' + price.trim();
+                    priceElement.href = "#"; // Pode colocar um link, se necessário
+
+                    // Inserir o link da localização
+                    const locationLink = document.getElementById('property-location');
+                    locationLink.href = locationURL.trim();
+                })
+                .catch(error => console.error('Erro ao carregar os detalhes do imóvel:', error));
+        }
+
+        // Carregar as informações ao carregar a página
+        window.onload = loadPropertyDetails;
+    </script>
+</body>
+</html>
