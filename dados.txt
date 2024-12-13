@@ -1,6 +1,6 @@
 Residência, Casa com dois quartos sociais - um quarto suíte - sala - cozinha garagem e um amplo quinta, imagem\casa1.png, R$8.000, https://maps.app.goo.gl/BYmvFdSade2PkVqRA, pagina_imovel_1\index.html
 
-Residência, Linda casa com 3 quartos e piscina,imagem\casa2.jpg,R$2.500,https://maps.app.goo.gl/MDHz7SG3KABovNeS9, https://imobiliariaideal.netlify.app/pagina_detalhes.html
+Residência, Linda casa com 3 quartos e piscina,imagem\casa2.jpg,R$2.500,https://maps.app.goo.gl/MDHz7SG3KABovNeS9, https://imobiliariaideal.netlify.app/pagina_imovel_1\index.html
 
 Residência, Linda casa com 2 quartos e piscina,imagem\casa3.jpg,R$7.500,https://maps.app.goo.gl/m5zGN2gQ5MQYh6eL6, pagina_detalhes.html
 
