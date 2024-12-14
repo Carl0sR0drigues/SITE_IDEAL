@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+    
+    <title>Detalhes do Imóvel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin-top: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 40px;
+        }
+
+        .property-images, .property-videos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .property-images img, .property-videos video {
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .property-videos video {
+            width: 640px;  /* Tamanho fixo do vídeo */
+            height: 480px; /* Altura fixa */
+            object-fit: cover;  /* Mantém a proporção sem distorcer */
+        }
+
+        .property-images img:hover, .property-videos video:hover {
+            transform: scale(1.1);
+        }
+
+        .property-details {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-price {
+            font-size: 18px;
+            color: #fff;
+            background-color: #28a745;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            text-decoration: none;
+        }
+
+        .property-price:hover {
+            background-color: #218838;
+        }
+
+        .property-location {
+            margin-top: 20px;
+        }
+
+        .property-location a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .property-location a:hover {
+            background-color: #0056b3;
+        }
+        
+        
+        
+.logo img {
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+    max-width: 1440px; /* Largura máxima */
+    margin: 0 auto;    /* Centraliza horizontalmente */
+    padding: 0 10px;   /* Espaçamento interno */
+}
+
+.logo img:hover {
+    transform: scale(1.25); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
+
+
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    width: fit-content;
+    font-size: 25px;
+    transition: transform 0.3s;
+}
+
+.footer-icons a:nth-child(1) i {
+    color: #E4405F;
+}
+
+.footer-icons a:nth-child(2) i {
+    color: #3b5998;
+}
+
+.footer-icons a:nth-child(3) i {
+    color: #25D366;
+}
+
+.footer-icons a:hover i {
+    animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-10px) scale(1.5);
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+    color: white; /* Texto branco */
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+    position: relative;
+    height: 375px;
+    z-index: 1; /* Ajustado para garantir que o footer fique acima de outros elementos */
+}
+
+.copyright {
+    width: 100%;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    padding: 1px 0;
+    text-align: center;
+    height: 25px;
+
+    
+}
+
+.copyright p {
+    color: rgb(0, 0, 0); /* Cor do texto preta */
+    opacity: 1;   /* Garantir que o texto não tenha opacidade */
+    font-family: "Arial black", sans-serif;
+}
+
+/* Ajustes de serviços, se necessário */
+.services-footer {
+    margin: 0px 0;
+    padding: 0px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.services-footer h3 {
+    color: black;
+    background-color: black;
+    width: 100vw;
+    margin: 0px 0;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Imóvel</h1>
+        <div class="property-images" id="property-images">
+            <!-- As imagens do imóvel serão carregadas aqui -->
+        </div>
+        <div class="property-videos" id="property-videos" style="display: none;">
+            <!-- Os vídeos do imóvel serão carregados aqui -->
+        </div>
+
+        <div class="property-details">
+            <p id="property-description"><strong>Descrição:</strong></p>
+            <a href="#" class="property-price" id="property-price"></a>
+            <div class="property-location">
+                <a id="property-location" href="#" target="_blank">Localização</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar os detalhes do imóvel
+        function loadPropertyDetails() {
+            fetch('imovel_detalhes.txt') // Substituir pelo nome do arquivo
+                .then(response => response.text())
+                .then(data => {
+                    const [images, videos, description, price, locationURL] = data.split(',');
+
+                    // Inserir as imagens dinamicamente
+                    const imagesArray = images.split(';');
+                    const imagesDiv = document.getElementById('property-images');
+                    imagesArray.forEach(image => {
+                        if (image.trim()) {
+                            const img = document.createElement('img');
+                            img.src = image.trim();
+                            img.alt = "Imagem do Imóvel";
+                            imagesDiv.appendChild(img);
+                        }
+                    });
+
+                    // Verificar e inserir os vídeos dinamicamente (apenas se houver vídeos)
+                    const videosDiv = document.getElementById('property-videos');
+                    if (videos.trim()) {
+                        const videosArray = videos.split(';');
+                        videosArray.forEach(video => {
+                            if (video.trim()) {
+                                const videoElement = document.createElement('video');
+                                videoElement.src = video.trim();
+                                videoElement.controls = true;
+                                videosDiv.appendChild(videoElement);
+                            }
+                        });
+                        // Mostrar o contêiner de vídeos se houver vídeos
+                        videosDiv.style.display = 'flex';
+                    }
+
+                    // Inserir a descrição
+                    document.getElementById('property-description').innerText += ' ' + description.trim();
+
+                    // Inserir o preço como botão
+                    const priceElement = document.getElementById('property-price');
+                    priceElement.innerText = 'Preço: ' + price.trim();
+                    priceElement.href = "#";
+
+                    // Inserir o link da localização
+                    const locationLink = document.getElementById('property-location');
+                    locationLink.href = locationURL.trim();
+                })
+                .catch(error => console.error('Erro ao carregar os detalhes do imóvel:', error));
+        }
+
+        // Carregar as informações ao carregar a página
+        window.onload = loadPropertyDetails;
+    </script>
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/imobiliariaideal.pa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="target="_blank">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+            
+            <a href="https://www.facebook.com/share/1ExjvgLBYM/?mibextid=LQQJ4d"target="_blank">
+                <i class="fa-brands fa-facebook fa-2x"></i>
+            </a>
+
+            <a href="https://api.whatsapp.com/send/?phone=5594981097000&text&type=phone_number&app_absent=0"target="_blank">
+                <i class="fa-brands fa-whatsapp fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="logo">
+            <a href="https://maps.app.goo.gl/TiXhAbm6JEMWuiyC7" target="logo">
+                <img 
+                src="logo_ideal-removebg-preview.png" 
+                alt="logo da imobiliaria" >
+            </a>
+        </div>
+        
+
+        <div class="copyright">
+            <p>Copyright 2024 | Dev Carl0sR0drigues - Todos direitos reservados.</p>
+        </div>
+
+    </footer>
+</body>
+</html>
