@@ -1,14 +1,3 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
-  outline: 0;
-}
-
-header {
-  width: 100%;
-}
 
 .header-content {
   display: flex;
@@ -119,6 +108,10 @@ i {
 /* ============================
    Hero Section
 ============================ */
+.hero-container{
+  text-align: center;
+}
+
 .hero {
   color: #000; /* Ajuste a cor conforme necessário */
   min-height: 10vh;
@@ -143,22 +136,36 @@ i {
 }
 
 /* Botão de contato */
+
 .button-contact {
-  border: 1px solid #000;
-  padding: 4px 16px;
+  border: 2px solid #0fb11f;
+  padding: 8px 20px;
   border-radius: 8px;
   background-color: transparent;
   font-size: 18px;
-  font-weight: 600;
-  transition: background-color 0.9s;
+  font-weight: bold;
   color: black;
+  cursor: pointer;
+  animation: blink 1s infinite; /* Animação de piscar */
+  transition: background-color 0.4s, color 0.4s;
 }
 
 .button-contact:hover {
-  border: 2px solid #37ec34;
-  background-color: #37ec34;
-  animation: scaleButton 0.8s alternate infinite;
+  background-color: #0fb11f; /* Muda a cor ao passar o mouse */
+  color: white; /* Muda a cor do texto */
 }
+
+/* Animação de piscar */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; /* Totalmente visível */
+  }
+  50% {
+    opacity: 0; /* Invisível */
+  }
+}
+
+
 
 @keyframes scaleButton {
   from {
@@ -232,145 +239,7 @@ i {
     margin-bottom: 10px;
   }
 }
-/* ============================
-   Seção de Serviços
-============================ */
-.services {
-  background-color: #fff;
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 54px 14px;
-}
 
-.services-content h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 38px;
-  margin-bottom: 14px;
-}
-
-.services-content p {
-  line-height: 125%;
-  text-align: justify;
-  max-width: 900px;
-  margin: 0 auto 20px;
-  padding: 0 20px;
-}
-
-/* ============================
-   Seção de Aluguel
-============================ */
-.rent {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.rent img {
-  width: 100%;
-  max-width: 1080px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 3px solid #000000;
-  border-radius: 10px;
-  margin-top: 30px;
-  transition: transform 0.4s;
-}
-
-.rent img:hover {
-  transform: scale(1.08);
-  z-index: 1;
-}
-
-.rental-details {
-  max-width: 500px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-}
-
-.rental-price {
-  display: flex;
-  align-items: center;
-  background-color: #fffbea;
-  border: 2px solid #ffd700;
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin-top: 10px;
-  max-width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.rental-price button {
-  background-color: #ff9800;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.rental-price button:hover {
-  background-color: #e68900;
-  transform: scale(1.1);
-}
-
-/* Botões adicionais (Localização e Mais Detalhes) */
-.buttons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.location-button button {
-  background-color: #0fb11f;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.details-button button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.location-button button:hover {
-  background-color: #218838;
-}
-
-.details-button button:hover {
-  background-color: #0056b3;
-}
-
-/* Responsividade da seção de aluguel */
-@media (max-width: 768px) {
-  .rent {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .rental-details {
-    margin-left: 0;
-  }
-}
 .footer {
   display: flex;
   flex-direction: column;
@@ -416,32 +285,28 @@ i {
     transform: translateY(-10px) scale(1.5);
   }
 }
-.services-footer h3 {
-  color: black;
-  width: 100vw; /* Largura total da janela */
-  margin: 0px 0; /* Espaçamento superior e inferior */
-  padding: 10px 0; /* Espaçamento interno para aumentar a área do fundo */
-  text-align: center; /* Centraliza o texto */
-  position: relative; /* Garante a posição relativa */
-  z-index: 1; /* Certifica-se de que o fundo fique acima de outros elementos */
-  margin-bottom: 1px;
-}
-
-.services-footer {
-  margin: 0px 0; /* Espaçamento superior e inferior */
-  padding: 0px 0; /* Espaçamento interno para aumentar a área do fundo */
-  text-align: center; /* Centraliza o texto */
-  position: relative; /* Garante a posição relativa */
-  z-index: 1; /* Certifica-se de que o fundo fique acima de outros elementos */
-}
 
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
-  height: 100vh;
-  position: relative;
+  height: 100%; /* Remover a altura duplicada */
+  margin: 0; /* Remover margem duplicada */
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
 }
+
+.content {
+  flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
+}
+
+.copy {
+  text-align: center;
+  margin-top: auto; /* Defina margem superior, se necessário */
+}
+
+
 
 button {
   font-family: "Sora", sans-serif;
@@ -460,3 +325,249 @@ a {
   cursor: pointer;
   text-decoration: none;
 }/*# sourceMappingURL=stile.css.map */
+
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+.serviços {
+  max-width: 1200px; /* Limita a largura do contêiner */
+  margin: 0 auto; /* Centraliza na página */
+  padding: 20px;
+}
+
+.serviços h2 {
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 20px;
+}
+
+.serviços .colunas {
+  display: grid; /* Habilita o Grid Layout */
+  grid-template-columns: repeat(2, 1fr); /* Cria duas colunas iguais */
+  gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.serviços .coluna p {
+  margin-bottom: 15px; /* Espaçamento entre parágrafos */
+}
+
+@media (max-width: 768px) {
+  .serviços .colunas {
+    grid-template-columns: 1fr; /* Altera para uma coluna em telas menores */
+  }
+}
+.centralizado {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin: 20px auto; /* Adiciona espaçamento em cima e embaixo e centraliza horizontalmente */
+}
+
+
+
+
+
+
+
+
+.imo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imo1 img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  border: 3px solid #333;
+  transition: transform 0.5s ease;
+}
+
+.imo1 img:hover {
+  transform: scale(1.10);
+}
+
+.imo1 h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.imo1 p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Estilo do contêiner do preço */
+.rental-price-container {
+  display: flex;
+  align-items: center;
+  background-color: #fffbea;
+  border: 2px solid #ffd700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rental-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rental-price strong {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  color: #333;
+}
+
+.rental-price button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #e68900; /* Cor de fundo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Foco e contorno com a cor personalizada */
+.rental-price button:focus {
+  outline: 1px solid #ff9800; /* Novo contorno com a cor #ff9800 */
+}
+
+/* Efeito de hover */
+.rental-price button:hover {
+  background-color: #218838;
+}
+
+/* Estilo do botão de preço */
+.imo1 .preço {
+  background-color: #0fb11f; /* Cor de fundo do botão de locação */
+  padding: 10px 20px; /* Tamanho do botão */
+  font-size: 1.5rem; /* Tamanho da fonte maior */
+  color: rgb(255, 248, 248); /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Aparece como ponteiro ao passar o mouse */
+  outline: none; /* Remove o contorno ao clicar */
+  margin: 10px; /* Margem ao redor do botão */
+  font-family: 'Arial Black', sans-serif; /* Fonte Arial Black */
+}
+
+
+
+.imo1 .preço:hover {
+  background-color: #23880e; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo do botão de locação */
+.imo1 .locazição {
+  background-color: #28a745; /* Cor personalizada para o botão de locação */
+}
+
+.imo1 .locazição:hover {
+  background-color: #1c7430; /* Cor do botão de locação ao passar o mouse */
+}
+
+/* Estilo do botão de mais detalhes */
+.imo1 .detalhes {
+  background-color: #007bff; /* Cor de fundo do botão de locação */
+  padding: 10px 10px; /* Tamanho do botão */
+  font-size: 1.5rem; /* Tamanho da fonte maior */
+  color: rgb(255, 248, 248); /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Aparece como ponteiro ao passar o mouse */
+  outline: none; /* Remove o contorno ao clicar */
+  margin: 10px; /* Margem ao redor do botão */
+  font-family: 'Arial Black', sans-serif; /* Fonte Arial Black */
+}
+
+.imo1 .detalhes:hover {
+  background-color: #002aff; /* Cor ao passar o mouse neste botão */
+}
+.container {
+  display: flex; /* Alternativa: usar grid */
+  flex-wrap: wrap; /* Permite itens quebrarem linha */
+  gap: 20px; /* Espaçamento entre itens */
+  justify-content: center; /* Centraliza os itens */
+  padding: 20px;
+}
+
+.imo1 {
+  flex: 1 1 calc(25% - 40px); /* Largura de 25%, ajustável */
+  max-width: 300px; /* Define limite para cada item */
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+/*-----------------------O BOTÃO CRESCE---------------------*/
+.rental-price button:hover,
+.imo1 .preço:hover,
+.imo1 .detalhes:hover {
+  transform: scale(1.1); /* Aumenta o botão em 10% */
+  transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+/* Adicionando uma animação global para os botões */
+.rental-price button,
+.imo1 .preço,
+.imo1 .detalhes {
+  transition: transform 0.3s ease-in-out; /* Adiciona transição a todos os estados */
+}
+
+
+
+/* <!---CARROSSEL--!> */
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.carousel-images img {
+  width: 33.33%;  /* Ajuste a porcentagem de acordo com o número de imagens visíveis */
+  border: 2px solid #ddd;  /* Borda entre as imagens */
+  border-radius: 10px;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-33.33%);
+  }
+  50% {
+    transform: translateX(-66.66%);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel-container {
+  animation: loop 12s infinite linear;
+}
