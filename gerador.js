@@ -2,11 +2,11 @@
 const imoveis = [
     {
         img: "imagem/casa1.png",
-        titulo: "Residência",
-        descricao: "Casa com dois quartos sociais - um quarto suíte - sala",
-        linkLocalizacao: "https://www.google.com.br/maps/place/6%C2%B002'21.1%22S+50%C2%B049'29.3%22W/@-6.039183,-50.824811,844m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-6.039183!4d-50.824811?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+        titulo: "Residência<br>Rua A n°695, Cidade Nova - Parauapebas-PA",
+        descricao: "🔸 02 quartos🔸 01 suítes🔸 01 quarto externo🔸 Sala ampla🔸 Cozinha com fogão cooktop  bancada em granito🔸 02 Banheiros social🔸 Garagem ampla e coberta🔸 Área de Serviços",
+        linkLocalizacao: "https://maps.app.goo.gl/Qb1NBxUT1BSXrMcB6",
         linkDetalhes: "pagina_imovel_1/pagina_detalhes.html",
-        preco: "R$1.500,00"
+        preco: "R$3.200,00."
     },
     {
         img: "imagem/casa2.png",
