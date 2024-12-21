@@ -1,10 +1,1 @@
-imagens\imagem1.jpg; imagens\imagem2.jpg; imagens\imagem3.jpg; imagens\imagem4.jpg; imagens\imagem5.jpg; imagens\imagem6.jpg; imagens\imagem7.jpg; imagens\imagem8.jpg; imagens\imagem9.jpg; imagens\imagem10.jpg; imagens\imagem11.jpg; imagens\imagem12.jpg; imagens\imagem13.jpg; imagens\imagem14.jpg; imagens\imagem15.jpg; imagens\imagem16.jpg; imagens\imagem17.jpg; imagens\imagem18.jpg,
-🔸 02 quartos;
-🔸 01 suítes;
-🔸 01 quarto externo;
-🔸 Sala ampla;
-🔸 Cozinha com fogão cooktop  bancada em granito;
-🔸 02 Banheiros social;
-🔸 Garagem ampla e coberta;
-🔸 Área de Serviços;
-, R$ 3.200,https://maps.app.goo.gl/Qb1NBxUT1BSXrMcB6
+imagens\imagem1.jpg; imagens\imagem2.jpg; imagens\imagem3.jpg; imagens\imagem4.jpg; imagens\imagem5.jpg; imagens\imagem6.jpg; imagens\imagem7.jpg; imagens\imagem8.jpg; imagens\imagem9.jpg; imagens\imagem10.jpg; imagens\imagem11.jpg; imagens\imagem12.jpg; imagens\imagem13.jpg; imagens\imagem14.jpg; imagens\imagem15.jpg; imagens\imagem16.jpg; imagens\imagem17.jpg; imagens\imagem18.jpg, Casa com 02 quartos - 01 suítes - 01 quarto externo - Sala ampla - Cozinha com fogão cooktop  bancada em granito - 02 Banheiros social - Garagem ampla e coberta - Área de Serviços, R$ 3.200,https://maps.app.goo.gl/Qb1NBxUT1BSXrMcB6
