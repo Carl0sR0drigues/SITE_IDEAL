@@ -1,48 +1,76 @@
 
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100%; /* Remover a altura duplicada */
+  margin: 0 auto; /* Remover margem duplicada */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
+}
+html, body {
+  overflow-x: hidden;
+}
+
+
 .header-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
+
 
 i {
   color: #232224;
-}
+}  
 
 .header-logo {
   display: flex;
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
   margin-top: 48px;
-  margin-left: auto; /* Empurra para o centro */
-  margin-right: auto; /* Empurra para o centro */
-  width: -moz-fit-content;
   width: fit-content; /* Garante que ocupe apenas o espaço necessário */
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
+
 @media screen and (max-width: 768px) {
   .header-content {
-    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 100%;
   }
+  
   .header-content i {
     margin-top: 16px;
     font-size: 40px;
-  }
+    
+  }  
   .header-logo img {
     width: 150px;
     margin-top: 50px;
+    display: block;
   }
+  
   .header-button {
     display: none;
-  }
-}
+  }  
+}  
 /* ============================
    Estilo para Ícones do Header
-============================ */
+============================ */   
 .header-icons {
   display: flex; /* Define flexbox para layout */
   gap: 50px; /* Espaço entre os ícones */
@@ -54,45 +82,50 @@ i {
   width: fit-content; /* Adapta o tamanho ao conteúdo */
   font-size: 20px; /* Tamanho da fonte */
   transition: transform 0.3s; /* Efeito suave no hover */
-}
+}  
 
 .header-icons a:nth-child(1) i {
   color: #E4405F;
-} /* Cor do Instagram */
+} /* Cor do Instagram */  
 .header-icons a:nth-child(2) i {
   color: #3b5998;
-} /* Cor do Facebook */
+} /* Cor do Facebook */  
 .header-icons a:nth-child(3) i {
   color: #25D366;
-} /* Cor do WhatsApp */
+} /* Cor do WhatsApp */  
 /* Animação no hover dos ícones */
 .header-icons a:hover i {
   animation: translateY 0.8s infinite alternate;
-}
+}  
 
 @keyframes translateY {
   from {
     transform: translateY(0) scale(1);
-  }
+  }  
   to {
     transform: translateY(-10px) scale(1.5);
-  }
-}
+  }  
+}  
 /* ============================
    Contêiner Geral
-============================ */
+============================ */   
 .container {
   max-width: 1440px; /* Largura máxima */
   margin: 0 auto; /* Centraliza horizontalmente */
   padding: 0 10px; /* Espaçamento interno */
-}
+}  
 
 /* ============================
    Seção de Fundo da Página
-============================ */
+============================ */   
+
+
 .bg-home {
   position: relative;
-}
+  max-width: 1440px; /* Limita a largura total do contêiner */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 100%;
+}  
 
 .bg-home::before {
   content: "";
@@ -101,16 +134,22 @@ i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("Parauapebas-Foto-Joao-Marcos-Rosa-scaled.jpg") no-repeat center/cover;
-  z-index: -1; /* Move o fundo para trás */
-}
+  background: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), 
+              url("Parauapebas-Foto-Joao-Marcos-Rosa-scaled.jpg") no-repeat center/cover;
+  z-index: -1; /* Move o fundo para trás */            
+}  
+
+
+
+
+
 
 /* ============================
    Hero Section
-============================ */
+============================ */   
 .hero-container{
   text-align: center;
-}
+}  
 
 .hero {
   color: #000; /* Ajuste a cor conforme necessário */
@@ -120,20 +159,20 @@ i {
   align-items: center;
   justify-content: center;
   padding: 14px;
-}
+}  
 
 .hero h1 {
   text-align: center;
   line-height: 150%;
-  max-width: 940px;
+  max-width: 1440px;
   font-weight: 800;
   font-size: 30px;
-}
+}  
 
 .hero p {
   text-align: center;
   margin: 14px 0;
-}
+}  
 
 /* Botão de contato */
 
@@ -148,64 +187,64 @@ i {
   cursor: pointer;
   animation: blink 1s infinite; /* Animação de piscar */
   transition: background-color 0.4s, color 0.4s;
-}
+}  
 
 .button-contact:hover {
   background-color: #0fb11f; /* Muda a cor ao passar o mouse */
   color: white; /* Muda a cor do texto */
-}
+}  
 
 /* Animação de piscar */
 @keyframes blink {
   0%, 100% {
     opacity: 1; /* Totalmente visível */
-  }
+  }  
   50% {
     opacity: 0; /* Invisível */
-  }
-}
+  }  
+}  
 
 
 
 @keyframes scaleButton {
   from {
     transform: scale(1);
-  }
+  }  
   to {
     transform: scale(1.07);
-  }
-}
+  }  
+}  
 /* Responsividade do Hero */
 @media (max-width: 768px) {
   .hero {
     min-height: 5vh;
-  }
+  }  
   .hero h1 {
     font-size: 34px;
     padding: 0 14px;
-  }
+  }  
   .hero p {
     font-size: 14px;
-  }
-}
+  }  
+}  
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 24px;
-  }
+  }  
   .hero p {
     font-size: 12px;
-  }
-}
+  }  
+}  
 /* ============================
    Seção Sobre
-============================ */
+============================ */   
 .about {
   overflow: hidden;
-  max-width: 1200px; /* Limita a largura do contêiner */
-  margin: 0 auto; /* Centraliza na página */
+  max-width: 1440px; /* Limita a largura do contêiner */
+  margin: auto; /* Centraliza na página */
   padding: 20px;
 
-}
+}  
 
 
 .about-content {
@@ -213,37 +252,37 @@ i {
   align-items: center;
   justify-content: center;
   gap: 14px;
-}
+}  
 
 .about-content img {
   max-width: 470px;
-}
+}  
 
 .about-content div {
   flex: 1;
-}
+}  
 
 .about-description h2 {
   font-size: 28px;
   margin-bottom: 24px;
-}
+}  
 
 .about-description p {
   margin-bottom: 14px;
   line-height: 150%;
-}
+}  
 
 /* Responsividade da seção "Sobre" */
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
     text-align: center;
-  }
+  }  
   .about-content img {
     max-width: 100%;
     margin-bottom: 10px;
-  }
-}
+  }  
+}  
 
 .footer {
   display: flex;
@@ -253,7 +292,7 @@ i {
   padding: 54px 0;
   gap: 10px;
   color: black;
-}
+}  
 
 .footer-icons {
   display: flex; /* Define flexbox para layout */
@@ -266,92 +305,92 @@ i {
   width: fit-content; /* Adapta o tamanho ao conteúdo */
   font-size: 25px; /* Tamanho da fonte */
   transition: transform 0.3s; /* Efeito suave no hover */
-}
+}  
 
 .footer-icons a:nth-child(1) i {
   color: #E4405F;
-} /* Cor do Instagram */
+} /* Cor do Instagram */  
 .footer-icons a:nth-child(2) i {
   color: #3b5998;
-} /* Cor do Facebook */
+} /* Cor do Facebook */  
 .footer-icons a:nth-child(3) i {
   color: #25D366;
-} /* Cor do WhatsApp */
+} /* Cor do WhatsApp */  
 /* Animação no hover dos ícones */
 .footer-icons a:hover i {
   animation: translateY 0.8s infinite alternate;
-}
+}  
 
 @keyframes translateY {
   from {
     transform: translateY(0) scale(1);
-  }
+  }  
   to {
     transform: translateY(-10px) scale(1.5);
-  }
-}
+  }  
+}  
 
 .content {
   flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
-}
+}  
 
 .copy {
   text-align: center;
   margin-top: auto; /* Defina margem superior, se necessário */
-}
+}  
 
 
 
 button {
   font-family: "Sora", sans-serif;
   cursor: pointer;
-}
+}  
 
 svg {
   width: 100%;
-}
+}  
 
 img {
   width: 100%;
-}
+}  
 
 a {
   cursor: pointer;
   text-decoration: none;
-}/*# sourceMappingURL=stile.css.map */
+}/*# sourceMappingURL=stile.css.map */  
 
 /*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
 
 .serviços {
-  max-width: 1200px; /* Limita a largura do contêiner */
+  max-width: 1440px; /* Limita a largura do contêiner */
   margin: 0 auto; /* Centraliza na página */
   padding: 20px;
-}
+}  
 
 .serviços h2 {
   text-align: center; /* Centraliza o título */
   margin-bottom: 20px;
-}
+}  
 
 .serviços .colunas {
   display: grid; /* Habilita o Grid Layout */
   grid-template-columns: repeat(2, 1fr); /* Cria duas colunas iguais */
   gap: 20px; /* Espaçamento entre as colunas */
-}
+}  
 
 .serviços .coluna p {
   margin-bottom: 15px; /* Espaçamento entre parágrafos */
-}
+}  
 
 @media (max-width: 768px) {
   .serviços .colunas {
     grid-template-columns: 1fr; /* Altera para uma coluna em telas menores */
-  }
-}
+  }  
+}  
 .centralizado {
   text-align: center; /* Centraliza o texto horizontalmente */
   margin: 20px auto; /* Adiciona espaçamento em cima e embaixo e centraliza horizontalmente */
-}
+}  
 
 
 
@@ -359,45 +398,52 @@ a {
 
 
 
+.container {
+  display: flex; /* Alternativa: usar grid */
+  flex-wrap: wrap; /* Permite itens quebrarem linha */
+  gap: 20px; /* Espaçamento entre itens */
+  justify-content: center; /* Centraliza os itens */
+  padding: 20px;
+}  
 
 .imo1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 400px;
+  max-width: 1440px;
   margin: 20px auto;
   padding: 20px;
   border: 2px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+}  
 
 .imo1 img {
   width: 100%;
-  max-width: 350px;
+  max-width: 1440px;
   border-radius: 15px;
   margin-bottom: 10px;
   border: 3px solid #333;
   transition: transform 0.5s ease;
-}
+}  
 
 .imo1 img:hover {
   transform: scale(1.10);
-}
+}  
 
 .imo1 h1 {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #333;
-}
+}  
 
 .imo1 p {
   font-size: 1rem;
   margin-bottom: 15px;
   color: #666;
-}
+}  
 
 /* Estilo do contêiner do preço */
 .rental-price-container {
@@ -408,21 +454,21 @@ a {
   padding: 10px 30px;
   border-radius: 10px;
   margin-top: 10px;
-  max-width: 200px;
+  max-width: 1440px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+}  
 
 .rental-price {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+}  
 
 .rental-price strong {
   font-size: 1.1rem;
   margin-right: 10px;
   color: #333;
-}
+}  
 
 .rental-price button {
   padding: 10px 15px;
@@ -434,17 +480,17 @@ a {
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
-}
+}  
 
 /* Foco e contorno com a cor personalizada */
 .rental-price button:focus {
   outline: 1px solid #ff9800; /* Novo contorno com a cor #ff9800 */
-}
+}  
 
 /* Efeito de hover */
 .rental-price button:hover {
   background-color: #218838;
-}
+}  
 
 /* Estilo do botão de preço */
 .imo1 .preço {
@@ -458,22 +504,22 @@ a {
   outline: none; /* Remove o contorno ao clicar */
   margin: 10px; /* Margem ao redor do botão */
   font-family: 'Arial Black', sans-serif; /* Fonte Arial Black */
-}
+}  
 
 
 
 .imo1 .preço:hover {
   background-color: #23880e; /* Cor de fundo do botão ao passar o mouse */
-}
+}  
 
 /* Estilo do botão de locação */
 .imo1 .locazição {
   background-color: #28a745; /* Cor personalizada para o botão de locação */
-}
+}  
 
 .imo1 .locazição:hover {
   background-color: #1c7430; /* Cor do botão de locação ao passar o mouse */
-}
+}  
 
 /* Estilo do botão de mais detalhes */
 .imo1 .detalhes {
@@ -487,56 +533,37 @@ a {
   outline: none; /* Remove o contorno ao clicar */
   margin: 10px; /* Margem ao redor do botão */
   font-family: 'Arial Black', sans-serif; /* Fonte Arial Black */
-}
+}  
 
 .imo1 .detalhes:hover {
   background-color: #002aff; /* Cor ao passar o mouse neste botão */
-}
-.container {
-  display: flex; /* Alternativa: usar grid */
-  flex-wrap: wrap; /* Permite itens quebrarem linha */
-  gap: 20px; /* Espaçamento entre itens */
-  justify-content: center; /* Centraliza os itens */
-  padding: 20px;
-}
+}  
 
 .imo1 {
   flex: 1 1 calc(25% - 40px); /* Largura de 25%, ajustável */
-  max-width: 300px; /* Define limite para cada item */
+  max-width: 1440px; /* Define limite para cada item */
   margin: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #fff;
-}
+}  
 /*-----------------------O BOTÃO CRESCE---------------------*/
 .rental-price button:hover,
 .imo1 .preço:hover,
 .imo1 .detalhes:hover {
   transform: scale(1.1); /* Aumenta o botão em 10% */
   transition: transform 0.3s ease-in-out; /* Animação suave */
-}
+}  
 
 /* Adicionando uma animação global para os botões */
 .rental-price button,
 .imo1 .preço,
 .imo1 .detalhes {
   transition: transform 0.3s ease-in-out; /* Adiciona transição a todos os estados */
-}
+}  
 
 
-
-
-body {
-  font-family: "Sora", sans-serif;
-  width: 100%;
-  height: 100%; /* Remover a altura duplicada */
-  margin: 0; /* Remover margem duplicada */
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
-}
 
 
 
@@ -545,7 +572,7 @@ body {
 /* Contêiner do carrossel */
 .carousel-container {
   width: 100%; /* Ocupa toda a largura disponível */
-  max-width: 1200px; /* Limita a largura máxima */
+  max-width: 1440px; /* Limita a largura máxima */
   margin: 0 auto; /* Centraliza o contêiner */
   overflow: hidden; /* Oculta o conteúdo que excede os limites do contêiner */
   position: relative; /* Necessário para o efeito de overflow */
@@ -577,4 +604,5 @@ border-radius: 10px; /* Arredonda os cantos da borda */
       transform: translateX(-100%); /* Move para a esquerda até o final do conjunto */
   }
 }
+
 
