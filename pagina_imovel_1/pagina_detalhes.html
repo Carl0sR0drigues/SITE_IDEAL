@@ -245,7 +245,7 @@
                 .then(response => response.text())
                 .then(data => {
                     const [images, videos, description, price, locationURL] = data.split(',');
-
+    
                     // Inserir as imagens dinamicamente
                     const imagesArray = images.split(';');
                     const imagesDiv = document.getElementById('property-images');
@@ -257,41 +257,55 @@
                             imagesDiv.appendChild(img);
                         }
                     });
-
+    
                     // Verificar e inserir os vídeos dinamicamente (apenas se houver vídeos)
                     const videosDiv = document.getElementById('property-videos');
+                    let hasValidVideo = false; // Flag para verificar se há algum vídeo válido
+    
                     if (videos.trim()) {
                         const videosArray = videos.split(';');
                         videosArray.forEach(video => {
                             if (video.trim()) {
-                                const videoElement = document.createElement('video');
+                                hasValidVideo = true; // Encontrou um vídeo válido
+                                var videoElement = document.createElement('video');
                                 videoElement.src = video.trim();
                                 videoElement.controls = true;
                                 videosDiv.appendChild(videoElement);
+                                var videoElement = document.querySelector('#property-videos video'); // Seleciona o primeiro vídeo
+                                if (videoElement == '') {
+                                    videoElement.style.display = 'none'; // Oculta o vídeo
+                                }
+
                             }
                         });
-                        // Mostrar o contêiner de vídeos se houver vídeos
-                        videosDiv.style.display = 'flex';
                     }
-
+    
+                    // Mostrar o contêiner de vídeos apenas se houver vídeos válidos
+                    if (hasValidVideo) {
+                        videosDiv.style.display = 'flex';
+                    } else {
+                        videosDiv.style.display = 'none'; // Esconde o contêiner se não houver vídeos
+                    }
+    
                     // Inserir a descrição
                     document.getElementById('property-description').innerText += ' ' + description.trim();
-
+    
                     // Inserir o preço como botão
                     const priceElement = document.getElementById('property-price');
                     priceElement.innerText = 'Preço: ' + price.trim();
                     priceElement.href = "#";
-
+    
                     // Inserir o link da localização
                     const locationLink = document.getElementById('property-location');
                     locationLink.href = locationURL.trim();
                 })
                 .catch(error => console.error('Erro ao carregar os detalhes do imóvel:', error));
         }
-
+    
         // Carregar as informações ao carregar a página
         window.onload = loadPropertyDetails;
     </script>
+    
     <footer class="footer">
         <div class="footer-icons">
             <a href="https://www.instagram.com/imobiliariaideal.pa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="target="_blank">
