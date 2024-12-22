@@ -289,9 +289,24 @@ i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 2px; /* Adiciona algum espaçamento interno */
   color: black;
-}  
+  text-align: center; /* Garante que o texto dentro do rodapé fique centralizado */
+  width: 100%; /* Garante que o rodapé ocupe toda a largura disponível */
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px; /* Ajusta o padding para telas menores */
+    font-size: 14px; /* Reduz o tamanho da fonte em telas menores */
+  }
+}
+
+.footer img {
+  max-width: 70%;  /* Garante que a imagem não ultrapasse a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
 
 .footer-icons {
   display: flex; /* Define flexbox para layout */
@@ -577,6 +592,7 @@ a {
   margin: 0 auto; /* Centraliza o contêiner */
   overflow: hidden; /* Oculta o conteúdo que excede os limites do contêiner */
   position: relative; /* Necessário para o efeito de overflow */
+  
 }
 
 /* Imagens do carrossel */
@@ -584,15 +600,18 @@ a {
   display: flex; /* Organiza as imagens em linha */
   animation: slide-infinite 15s linear infinite; /* Animação contínua e infinita */
   width: calc(250%); /* Dobra a largura para suportar o loop */
-
+  
 }
 
 .carousel-images img {
-width: calc(100% / 6); /* Cada imagem ocupa um sexto da largura visível */
-flex-shrink: 0; /* Garante que as imagens não encolham */
-object-fit: cover; /* Ajusta a imagem ao espaço sem distorção */
-border: 3px solid rgb(255, 255, 255); /* Define uma borda sólida preta com 5px */
-border-radius: 10px; /* Arredonda os cantos da borda */
+  width: calc(100% / 6); /* Cada imagem ocupa um sexto da largura visível */
+  flex-shrink: 0; /* Garante que as imagens não encolham */
+  object-fit: cover; /* Ajusta a imagem ao espaço sem distorção */
+  border: 3px solid rgb(255, 255, 255); /* Define uma borda sólida preta com 5px */
+  border-radius: 10px; /* Arredonda os cantos da borda */
+  width: auto; /* Define a largura */
+  height: 280px; /* Define a altura */
+  object-fit: contain; /* Mantém as proporções sem cortar */
 }
 
 
@@ -603,6 +622,29 @@ border-radius: 10px; /* Arredonda os cantos da borda */
   }
   100% {
       transform: translateX(-100%); /* Move para a esquerda até o final do conjunto */
+  }
+}
+
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+  /* Ajuste no contêiner do carrossel */
+  .carousel-container {
+    width: 100%; /* Mantém a largura total */
+    max-width: 100%; /* Remove a largura máxima para telas menores */
+  }
+
+  /* Ajuste no carrossel de imagens */
+  .carousel-images {
+    width: calc(385%); /* Ajusta a largura das imagens */
+    height: 225px; /* Reduz a altura para telas pequenas */
+  }
+
+  /* Ajuste no tamanho das imagens do carrossel */
+  .carousel-images img {
+    width: auto; /* Cada imagem ocupará toda a largura disponível */
+    height: auto; /* Ajuste a altura automaticamente */
+    object-fit: contain; /* Garante que as imagens não sejam cortadas */
   }
 }
 
