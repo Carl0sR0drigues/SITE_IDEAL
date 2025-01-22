@@ -6,6 +6,7 @@
 
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" href="logo2.png" type="image/png">
         </head>
     
     <title>Detalhes do Imóvel</title>
@@ -59,9 +60,14 @@
             object-fit: cover;  /* Mantém a proporção sem distorcer */
         }
 
-        .property-images img:hover, .property-videos video:hover {
+
+        .property-videos video:hover {
             transform: scale(1.1);
+        } 
+        .property-images img:hover {
+            transform: scale(2.0);
         }
+
 
         .property-details {
             margin-top: 30px;
@@ -245,7 +251,7 @@
                 .then(response => response.text())
                 .then(data => {
                     const [images, videos, description, price, locationURL] = data.split(',');
-
+    
                     // Inserir as imagens dinamicamente
                     const imagesArray = images.split(';');
                     const imagesDiv = document.getElementById('property-images');
@@ -257,41 +263,55 @@
                             imagesDiv.appendChild(img);
                         }
                     });
-
+    
                     // Verificar e inserir os vídeos dinamicamente (apenas se houver vídeos)
                     const videosDiv = document.getElementById('property-videos');
+                    let hasValidVideo = false; // Flag para verificar se há algum vídeo válido
+    
                     if (videos.trim()) {
                         const videosArray = videos.split(';');
                         videosArray.forEach(video => {
                             if (video.trim()) {
-                                const videoElement = document.createElement('video');
+                                hasValidVideo = true; // Encontrou um vídeo válido
+                                var videoElement = document.createElement('video');
                                 videoElement.src = video.trim();
                                 videoElement.controls = true;
                                 videosDiv.appendChild(videoElement);
+                                var videoElement = document.querySelector('#property-videos video'); // Seleciona o primeiro vídeo
+                                if (videoElement == '') {
+                                    videoElement.style.display = 'none'; // Oculta o vídeo
+                                }
+
                             }
                         });
-                        // Mostrar o contêiner de vídeos se houver vídeos
-                        videosDiv.style.display = 'flex';
                     }
-
+    
+                    // Mostrar o contêiner de vídeos apenas se houver vídeos válidos
+                    if (hasValidVideo) {
+                        videosDiv.style.display = 'flex';
+                    } else {
+                        videosDiv.style.display = 'none'; // Esconde o contêiner se não houver vídeos
+                    }
+    
                     // Inserir a descrição
                     document.getElementById('property-description').innerText += ' ' + description.trim();
-
+    
                     // Inserir o preço como botão
                     const priceElement = document.getElementById('property-price');
                     priceElement.innerText = 'Preço: ' + price.trim();
                     priceElement.href = "#";
-
+    
                     // Inserir o link da localização
                     const locationLink = document.getElementById('property-location');
                     locationLink.href = locationURL.trim();
                 })
                 .catch(error => console.error('Erro ao carregar os detalhes do imóvel:', error));
         }
-
+    
         // Carregar as informações ao carregar a página
         window.onload = loadPropertyDetails;
     </script>
+    
     <footer class="footer">
         <div class="footer-icons">
             <a href="https://www.instagram.com/imobiliariaideal.pa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="target="_blank">

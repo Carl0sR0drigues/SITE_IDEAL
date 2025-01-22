@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Faz o body ocupar toda a altura da tela */
-}
+  }
 html, body {
   overflow-x: hidden;
 }
@@ -35,6 +35,7 @@ i {
   margin-top: 48px;
   width: fit-content; /* Garante que ocupe apenas o espaço necessário */
   text-align: center;
+  
 }
 
 * {
@@ -122,7 +123,7 @@ i {
 
 .bg-home {
   position: relative;
-  max-width: 1440px; /* Limita a largura total do contêiner */
+  max-width: 100%; /* Limita a largura total do contêiner */
   margin: 0 auto; /* Centraliza horizontalmente */
   width: 100%;
 }  
@@ -149,6 +150,7 @@ i {
 ============================ */   
 .hero-container{
   text-align: center;
+  width: 100%;
 }  
 
 .hero {
@@ -420,6 +422,8 @@ a {
   gap: 20px; /* Espaçamento entre itens */
   justify-content: center; /* Centraliza os itens */
   padding: 20px;
+  width: 100%;
+
 }  
 
 .imo1 {

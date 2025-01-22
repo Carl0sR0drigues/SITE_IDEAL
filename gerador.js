@@ -9,12 +9,12 @@ const imoveis = [
         preco: "R$3.200,00."
     },
     {
-        img: "imagem/casa2.png",
-        titulo: "Residência",
-        descricao: "Apartamento com 3 quartos, sala ampla e varanda",
-        linkLocalizacao: "https://www.google.com.br/maps/place/6%C2%B002'21.1%22S+50%C2%B049'29.3%22W/@-6.039183,-50.824811,844m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-6.039183!4d-50.824811?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
-        linkDetalhes: "pagina_imovel_3/pagina_detalhes.html",
-        preco: "R$2.200,00"
+      img: "imagem/2.png",
+      titulo: "Casa Sobrado<br>Rua Castelo Branco n°110, Rio Verde  - Parauapebas-PA",
+      descricao: "🔸 03 quartos, sendo 02 suítes🔸 Sala ampla🔸 Cozinha🔸 01 Banheiro social🔸 Garagem ampla e coberta🔸Área de Serviços<br><br><br>",
+      linkLocalizacao: "https://maps.app.goo.gl/wwAKVpmuu4A44oAq7",
+      linkDetalhes: "pagina_imovel_2/pagina_detalhes.html",
+      preco: "R$ 2.200,00"
     },
     {
         img: "imagem/casa3.png",
