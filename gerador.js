@@ -19,7 +19,7 @@ const imoveis = [
     {
         img: "imagem/casa3.png",
         titulo: "Apartamento<br>Av. Rio Grande 144, 1° Andar - Beira Rio  - Parauapebas-PA",
-        descricao: "🔸 02 quartos suítes 🔸 Sala ampla 🔸 Cozinha 🔸 Varanda 🔸 01 Lavabo externo 🔸 Garagem 01 vaga coberta 🔸 Área de Serviços<br><br>",
+        descricao: "🔸 02 quartos suítes 🔸 Sala ampla 🔸 Cozinha 🔸 Varanda 🔸 01 Lavabo externo 🔸 Garagem 01 vaga coberta 🔸 Área de Serviços<br><br><br>",
         linkLocalizacao: "https://maps.app.goo.gl/3mm54VA5q3DkzCms8",
         linkDetalhes: "pagina_imovel_3/pagina_detalhes.html",
         preco: "R$ 1.700,00"
