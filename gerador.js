@@ -18,11 +18,11 @@ const imoveis = [
     },
     {
         img: "imagem/casa3.png",
-        titulo: "Residência",
-        descricao: "Casa com 4 quartos, piscina e área de lazer",
-        linkLocalizacao: "https://www.google.com.br/maps/place/6%C2%B002'21.1%22S+50%C2%B049'29.3%22W/@-6.039183,-50.824811,844m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-6.039183!4d-50.824811?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+        titulo: "Apartamento<br>Av. Rio Grande 144, 1° Andar - Beira Rio  - Parauapebas-PA",
+        descricao: "🔸 02 quartos suítes 🔸 Sala ampla 🔸 Cozinha 🔸 Varanda 🔸 01 Lavabo externo 🔸 Garagem 01 vaga coberta 🔸 Área de Serviços<br><br>",
+        linkLocalizacao: "https://maps.app.goo.gl/3mm54VA5q3DkzCms8",
         linkDetalhes: "pagina_imovel_3/pagina_detalhes.html",
-        preco: "R$3.000,00"
+        preco: "R$ 1.700,00"
     },
     {
         img: "imagem/casa4.png",
@@ -99,7 +99,7 @@ function criarImovel(imovel) {
 
         <!-- Botão de Locação com link -->
         <a href="${imovel.linkLocalizacao}"" target="_blank">
-            <button class="preço">Locação</button>
+            <button class="preço">Localização</button>
         </a>
 
         <!-- Botão de Mais Detalhes com link -->
