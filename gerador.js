@@ -19,7 +19,7 @@ const imoveis = [
     {
         img: "imagem/casa3.png",
         titulo: "Apartamento<br>Av. Rio Grande 144, 1° Andar - Beira Rio  - Parauapebas-PA",
-        descricao: "🔸 02 quartos suítes 🔸 Sala ampla 🔸 Cozinha 🔸 Varanda 🔸 01 Lavabo externo 🔸 Garagem 01 vaga coberta 🔸 Área de Serviços<br><br><br>",
+        descricao: "🔸 02 quartos suítes 🔸 Sala ampla 🔸 Cozinha 🔸 Varanda 🔸 01 Lavabo externo 🔸 Garagem 01 vaga coberta 🔸 Área de Serviços<br><br>",
         linkLocalizacao: "https://maps.app.goo.gl/3mm54VA5q3DkzCms8",
         linkDetalhes: "pagina_imovel_3/pagina_detalhes.html",
         preco: "R$ 1.700,00"
@@ -27,7 +27,7 @@ const imoveis = [
     {
         img: "imagem/casa4.png",
         titulo: "Casa com Piscina<br>Rua 21, Quadra 25, Lote 08, Bairro dos Minérios   - Parauapebas-PA",
-        descricao: "🔸 02 quartos 🔸 01 Sala ampla 🔸 Cozinha 🔸 01 Banheiro social interno 🔸 Garagem ampla e coberta 🔸 Área de serviços coberta 🔸 01 Banheiro externo 🔸 Área de lazer com piscina",
+        descricao: "🔸 02 quartos 🔸 01 Sala ampla 🔸 Cozinha 🔸 01 Banheiro social interno 🔸 Garagem ampla e coberta 🔸 Área de serviços coberta 🔸 01 Banheiro externo 🔸 Área de lazer com piscina<br>",
         linkLocalizacao: "https://maps.app.goo.gl/Y9tcTmXCJYHtg77TA",
         linkDetalhes: "pagina_imovel_4/pagina_detalhes.html",
         preco: "R$2.100,00"
@@ -43,26 +43,26 @@ const imoveis = [
     {
         img: "imagem/casa6.png",
         titulo: "Ponto Comercial de Esquina<br>Av. D, Qd 177, Lt 04, Sala A - Esquina com Avenida O - Bairro Cidade Jardim - Parauapebas-PA",
-        descricao: "Sala com aproximadamente 45,00m² de área livre 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado com duas entradas 🔸 Ideal para escritórios, lojas e comércios em geral<br><br>",
+        descricao: "Sala com aproximadamente 45,00m² de área livre 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado com duas entradas 🔸 Ideal para escritórios, lojas e comércios em geral<br>",
         linkLocalizacao: "https://maps.app.goo.gl/DtTdFUdtcCdMQVaC9",
         linkDetalhes: "pagina_imovel_6/pagina_detalhes.html",
         preco: "R$1.600,00"
     },
     {
         img: "imagem/casa7.png",
-        titulo: "Sala comercial 1°Andar<br>Rua A nº 695 B, Bairro Cidade Nova - Parauapebas-PA",
-        descricao: "🔸 Sala com aproximadamente 20,00 m² 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado 🔸 Ideal para escritório individual.<br><br>",
+        titulo: "Sala comercial 1°Andar<br>Rua A nº 695 B, Bairro Cidade Nova - Parauapebas-PA<br<br><br><br>",
+        descricao: "🔸 Sala com aproximadamente 20,00 m² 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado 🔸 Ideal para escritório individual.<br><br><br>",
         linkLocalizacao: "https://maps.app.goo.gl/Qb1NBxUT1BSXrMcB6",
         linkDetalhes: "pagina_imovel_7/pagina_detalhes.html",
         preco: "R$750,00"
     },
     {
         img: "imagem/casa8.png",
-        titulo: "Av. D, Qd 177, Lt 04, Sala A - Esquina com Avenida O - Bairro Cidade Jardim - Parauapebas-PA",
-        descricao: "Sala com aproximadamente 45,00m² de área livre 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado com duas entradas 🔸 Ideal para escritórios, lojas e comércios em geral<br><br>",
-        linkLocalizacao: "https://maps.app.goo.gl/DtTdFUdtcCdMQVaC9",
+        titulo: "Residencia com opção de ponto comercial na garagem<br>Rua A n° 627, Cidade Nova - Parauapebas-PA",
+        descricao: "🔸 02 quartos sendo 01 suíte 🔸 Sala 🔸 Cozinha 🔸 01 Banheiro social 🔸 Garagem ou ponto comercial na frente (atualmente adaptada para ponto comercial) 🔸 Área de Serviços 🔸 Amplo quintal nos fundos.",
+        linkLocalizacao: "https://maps.app.goo.gl/PkcCYyZmACXaDdGw5",
         linkDetalhes: "pagina_imovel_8/pagina_detalhes.html",
-        preco: "R$1.600,00"
+        preco: "R$1.800,00"
     }
 ];
 
