@@ -26,18 +26,18 @@ const imoveis = [
     },
     {
         img: "imagem/casa4.png",
-        titulo: "Residência",
-        descricao: "Casa com 4 quartos, piscina e área de lazer",
-        linkLocalizacao: "https://www.google.com.br/maps/place/6%C2%B002'21.1%22S+50%C2%B049'29.3%22W/@-6.039183,-50.824811,844m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-6.039183!4d-50.824811?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
-        linkDetalhes: "pagina_imovel_3/pagina_detalhes.html",
-        preco: "R$3.000,00"
+        titulo: "Casa com Piscina<br>Rua 21, Quadra 25, Lote 08, Bairro dos Minérios   - Parauapebas-PA",
+        descricao: "🔸 02 quartos 🔸 01 Sala ampla 🔸 Cozinha 🔸 01 Banheiro social interno 🔸 Garagem ampla e coberta 🔸 Área de serviços coberta 🔸 01 Banheiro externo 🔸 Área de lazer com piscina",
+        linkLocalizacao: "https://maps.app.goo.gl/Y9tcTmXCJYHtg77TA",
+        linkDetalhes: "pagina_imovel_4/pagina_detalhes.html",
+        preco: "R$2.100,00"
     },
     {
         img: "imagem/casa5.png",
         titulo: "Residência",
         descricao: "Casa com 4 quartos, piscina e área de lazer",
         linkLocalizacao: "link-para-localizacao3.html",
-        linkDetalhes: "link-para-detalhes3.html",
+        linkDetalhes: "pagina_imovel_5/pagina_detalhes.html",
         preco: "R$3.000,00"
     },
     {
@@ -45,7 +45,7 @@ const imoveis = [
         titulo: "Residência",
         descricao: "Casa com 4 quartos, piscina e área de lazer",
         linkLocalizacao: "link-para-localizacao3.html",
-        linkDetalhes: "link-para-detalhes3.html",
+        linkDetalhes: "pagina_imovel_6/pagina_detalhes.html",
         preco: "R$3.000,00"
     }
 ];
