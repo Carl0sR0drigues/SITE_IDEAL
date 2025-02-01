@@ -422,7 +422,7 @@ a {
   gap: 20px; /* Espaçamento entre itens */
   justify-content: center; /* Centraliza os itens */
   padding: 20px;
-  width: 100%;
+  width: 90%;
 
 }  
 
@@ -562,7 +562,7 @@ a {
 
 .imo1 {
   flex: 1 1 calc(25% - 40px); /* Largura de 25%, ajustável */
-  max-width: 1440px; /* Define limite para cada item */
+  max-width: 415px; /* Define limite para cada item */
   margin: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;

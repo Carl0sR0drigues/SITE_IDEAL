@@ -42,10 +42,26 @@ const imoveis = [
     },
     {
         img: "imagem/casa6.png",
+        titulo: "Ponto Comercial de Esquina<br>Av. D, Qd 177, Lt 04, Sala A - Esquina com Avenida O - Bairro Cidade Jardim - Parauapebas-PA",
+        descricao: "Sala com aproximadamente 45,00m² de área livre 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado com duas entradas 🔸 Ideal para escritórios, lojas e comércios em geral<br><br>",
+        linkLocalizacao: "https://maps.app.goo.gl/DtTdFUdtcCdMQVaC9",
+        linkDetalhes: "pagina_imovel_6/pagina_detalhes.html",
+        preco: "R$1.600,00"
+    },
+    {
+        img: "imagem/casa7.png",
+        titulo: "Sala comercial 1°Andar<br>Rua A nº 695 B, Bairro Cidade Nova - Parauapebas-PA",
+        descricao: "🔸 Sala com aproximadamente 20,00 m² 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado 🔸 Ideal para escritório individual.<br><br>",
+        linkLocalizacao: "https://maps.app.goo.gl/Qb1NBxUT1BSXrMcB6",
+        linkDetalhes: "pagina_imovel_7/pagina_detalhes.html",
+        preco: "R$750,00"
+    },
+    {
+        img: "imagem/casa8.png",
         titulo: "Av. D, Qd 177, Lt 04, Sala A - Esquina com Avenida O - Bairro Cidade Jardim - Parauapebas-PA",
         descricao: "Sala com aproximadamente 45,00m² de área livre 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado com duas entradas 🔸 Ideal para escritórios, lojas e comércios em geral<br><br>",
-        linkLocalizacao: "link-para-localizacao3.html",
-        linkDetalhes: "pagina_imovel_6/pagina_detalhes.html",
+        linkLocalizacao: "https://maps.app.goo.gl/DtTdFUdtcCdMQVaC9",
+        linkDetalhes: "pagina_imovel_8/pagina_detalhes.html",
         preco: "R$1.600,00"
     }
 ];
