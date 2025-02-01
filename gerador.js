@@ -9,7 +9,7 @@ const imoveis = [
         preco: "R$3.200,00."
     },
     {
-      img: "imagem/2.png",
+      img: "imagem/casa2.png",
       titulo: "Casa Sobrado<br>Rua Castelo Branco n°110, Rio Verde  - Parauapebas-PA",
       descricao: "🔸 03 quartos, sendo 02 suítes🔸 Sala ampla🔸 Cozinha🔸 01 Banheiro social🔸 Garagem ampla e coberta🔸Área de Serviços<br><br><br>",
       linkLocalizacao: "https://maps.app.goo.gl/wwAKVpmuu4A44oAq7",
@@ -42,11 +42,11 @@ const imoveis = [
     },
     {
         img: "imagem/casa6.png",
-        titulo: "Residência",
-        descricao: "Casa com 4 quartos, piscina e área de lazer",
+        titulo: "Av. D, Qd 177, Lt 04, Sala A - Esquina com Avenida O - Bairro Cidade Jardim - Parauapebas-PA",
+        descricao: "Sala com aproximadamente 45,00m² de área livre 🔸 01 Banheiro social 🔸 Porta de Vidro Temperado com duas entradas 🔸 Ideal para escritórios, lojas e comércios em geral<br><br>",
         linkLocalizacao: "link-para-localizacao3.html",
         linkDetalhes: "pagina_imovel_6/pagina_detalhes.html",
-        preco: "R$3.000,00"
+        preco: "R$1.600,00"
     }
 ];
 
