@@ -34,11 +34,11 @@ const imoveis = [
     },
     {
         img: "imagem/casa5.png",
-        titulo: "Residência",
-        descricao: "Casa com 4 quartos, piscina e área de lazer",
-        linkLocalizacao: "link-para-localizacao3.html",
+        titulo: "Apartamento<br>Rua  Rio Claro Esquina com Av.  Rio Grande - 2° Andar - Bairro Beira Rio   - Parauapebas-PA",
+        descricao: "🔸 03 quartos sendo 01 suíte, todos com central de ar condicionado 🔸 01 Sala ampla 🔸 Cozinha ampla e com móveis planejados 🔸 01 Banheiro social 🔸 Garagem 01 vaga coberta 🔸 Área de serviços",
+        linkLocalizacao: "https://maps.app.goo.gl/LNUP8pws14op15aU8",
         linkDetalhes: "pagina_imovel_5/pagina_detalhes.html",
-        preco: "R$3.000,00"
+        preco: "R$2.500,00"
     },
     {
         img: "imagem/casa6.png",
